@@ -23,8 +23,8 @@ def reverse_transformer(dec):
     minute = int((dec - degree * 216000) / 3600)
     second = int((dec - (degree * 216000 + minute * 3600)) / 60)
     split = int((dec - (degree * 216000 + minute * 3600 + second * 60)) / 1)
-    transformed_coordinate = f"{degree}° {minute}' {second}.{split}''"
-    return transformed_coordinate
+    reverse_transformed_coordinate = f"{degree}° {minute}' {second}.{split}''"
+    return reverse_transformed_coordinate
 
 # Here, is the main function. Coordinates to be entered as input must be entered in degree-minute-second-split
 # second format, which is frequently used. If any of these is a single digit number, it must be entered with
