@@ -18,11 +18,11 @@ def coordinate_transformer(coord):
 # Here, is a function that will convert random coordinates generated in split second format to classical
 # degree-minute-second-split second format.
 
-def reverse_transformer(dec):
-    degree = int(dec / 216000)
-    minute = int((dec - degree * 216000) / 3600)
-    second = int((dec - (degree * 216000 + minute * 3600)) / 60)
-    split = int((dec - (degree * 216000 + minute * 3600 + second * 60)) / 1)
+def reverse_transformer(spl):
+    degree = int(spl / 216000)
+    minute = int((spl - degree * 216000) / 3600)
+    second = int((spl - (degree * 216000 + minute * 3600)) / 60)
+    split = int((spl - (degree * 216000 + minute * 3600 + second * 60)) / 1)
     reverse_transformed_coordinate = f"{degree}° {minute}' {second}.{split}''"
     return reverse_transformed_coordinate
 
